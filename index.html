@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memory-Du-Corps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="christmas.ico">
+</head>
+
+<body>
+  <h1 class="page-title">Memory-Du-Corps</h1>
+  <div class="overlay-text visible">
+   Cliquez sur l'écran pour commencer
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    Oh non !
+    <span class="overlay-text-small">Cliquez sur l'écran pour rejouer</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+  Yayyy Bravoo !!
+    <span class="overlay-text-small">Cliquez sur l'écran pour rejouer</span>
+  </div>
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Temps <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Essais <span id="flips">0</span>
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioMai()"  class="card-back card-face">
+     </div>
+      <div class="card-front card-face">
+        <audio  id="main" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/main.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262585255866438/main.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioMai1()"  class="card-back card-face">
+      </div>
+      <div class="card-front card-face">
+        <audio  id="main1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/main.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262585255866438/main.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioVen()"  class="card-back card-face">
+
+      </div>
+      <div class="card-front card-face">
+        <audio  id="ventre" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/ventre.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584983253052/ventre.png">
+      </div>
+    </div>
+    <div class="card">
+      <div  onclick="playAudioVen1()" class="card-back card-face">
+      
+      </div>
+      <div class="card-front card-face">
+        <audio  id="ventre1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/ventre.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584983253052/ventre.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioTet()" class="card-back card-face">
+   
+      </div>
+      <div class="card-front card-face">
+        <audio  id="tete" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/tete.m4a?raw=true"></audio>
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584739954768/tete.png">
+      </div>
+    </div>
+    <div class="card">
+      <div  onclick="playAudioTet1()" class="card-back card-face">
+ 
+      </div>
+      <div class="card-front card-face">
+        <audio  id="tete1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/tete.m4a?raw=true"></audio>
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584739954768/tete.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioPie()" class="card-back card-face">
+      </div>
+      <div  class="card-front card-face">
+        <audio  id="pieds" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/pieds.m4a?raw=true"></audio>
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584496689172/pieds.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioPie1()" class="card-back card-face">
+
+      </div>
+      <div  class="card-front card-face">
+        <audio id="pieds1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/pieds.m4a?raw=true"></audio>
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584496689172/pieds.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioOrt()" class="card-back card-face">
+
+      </div>
+      <div class="card-front card-face">
+        <audio  id="orteilles" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/orteilles.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584286990356/orteilles.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioOrt1()" class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="orteilles1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/orteilles.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584286990356/orteilles.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioOng()"  class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="ongles" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/ongles.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584047902720/ongles.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioOng1()" class="card-back card-face">
+      
+      </div>
+      <div class="card-front card-face">
+        <audio  id="ongles1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/ongles.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920262584047902720/ongles.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioBra()" class="card-back card-face">
+     
+      </div>
+      <div  class="card-front card-face">
+        <audio  id="bras" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/bras.m4a?raw=true'"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268488864596008/bras.png">
+      </div>
+    </div>
+    <div class="card">
+      <div  onclick="playAudioBra1()"  class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="bras1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/bras.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268488864596008/bras.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioDoi()" class="card-back card-face">
+      
+      </div>
+      <div class="card-front card-face">
+        <audio  id="doigts" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268684587577365/doigts.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioDoi1()" class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="doigts1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268684587577365/doigts.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioDos()" class="card-back card-face">
+      
+      </div>
+      <div class="card-front card-face">
+        <audio  id="dos" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268715893878784/dos.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioDos1()" class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="dos1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268715893878784/dos.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioJam()" class="card-back card-face">
+      
+      </div>
+      <div class="card-front card-face">
+        <audio  id="jambe" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268849973182464/jambe.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioJam1()" class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="jambe1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268849973182464/jambe.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioGen()" class="card-back card-face">
+      
+      </div>
+      <div class="card-front card-face">
+        <audio  id="genoux" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268834299052062/genoux.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioGen1()" class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="genoux1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920268834299052062/genoux.png">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioCoud()" class="card-back card-face">
+      
+      </div>
+      <div class="card-front card-face">
+        <audio  id="coude" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920278681547587634/coude.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div onclick="playAudioCoud1()" class="card-back card-face">
+     
+      </div>
+      <div class="card-front card-face">
+        <audio  id="coude1" src="https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/doigts.m4a?raw=true"></audio>
+
+        <img class="card-value" src="https://cdn.discordapp.com/attachments/901150871927279636/920278681547587634/coude.jpg">
+      </div>
+    </div>
+   
+  </div>
+</body>
+ <script src="app.js"></script>
+    </body>
+</html>
+
