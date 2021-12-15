@@ -33,7 +33,7 @@ body {
 
 .game-container {
   display: grid;
-  grid-template-columns: repeat(8, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   margin: 50px;
   justify-content: center;
