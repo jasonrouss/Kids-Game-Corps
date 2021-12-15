@@ -1,7 +1,7 @@
 class AudioController {
   constructor() {
     this.bgMusic = new Audio(
-      "https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/backgroundMusic.m4a?raw=true"
+      "https://github.com/jasonrouss/Kids-Game-Corps/blob/master/audio/bgMusic.mp3?raw=true"
     );
     this.flipSound = new Audio(
       "https://raw.githubusercontent.com/WebDevSimplified/Mix-Or-Match/master/Assets/Audio/flip.wav"
