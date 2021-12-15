@@ -1,8 +1,5 @@
 class AudioController {
   constructor() {
-    this.bgMusic = new Audio(
-      "https://github.com/jasonrouss/Christmas-Kids-Game/blob/master/audio/backgroundMusic.m4a?raw=true"
-    );
     this.flipSound = new Audio(
       "https://raw.githubusercontent.com/WebDevSimplified/Mix-Or-Match/master/Assets/Audio/flip.wav"
     );
@@ -13,16 +10,8 @@ class AudioController {
       "https://raw.githubusercontent.com/WebDevSimplified/Mix-Or-Match/master/Assets/Audio/victory.wav"
     );
     this.gameOverSound = new Audio("Assets/Audio/gameOver.wav");
-    this.bgMusic.volume = 0.5;
-    this.bgMusic.loop = true;
   }
-  startMusic() {
-    this.bgMusic.play();
-  }
-  stopMusic() {
-    this.bgMusic.pause();
-    this.bgMusic.currentTime = 0;
-  }
+
   flip() {
     this.flipSound.play();
   }
@@ -30,11 +19,9 @@ class AudioController {
     this.matchSound.play();
   }
   victory() {
-    this.stopMusic();
     this.victorySound.play();
   }
   gameOver() {
-    this.stopMusic();
     this.gameOverSound.play();
   }
 }
@@ -55,7 +42,6 @@ class MixOrMatch {
     this.cardToCheck = null;
     this.matchedCards = [];
     this.busy = true;
-    this.audioController.startMusic();
     setTimeout(() => {
       this.shuffleCards(this.cardsArray);
       this.countdown = this.startCountdown();
