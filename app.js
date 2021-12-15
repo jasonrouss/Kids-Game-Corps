@@ -172,7 +172,7 @@ function playAudioVen() {
   var ventre = document.getElementById("ventre");
   ventre.play();
 }
-function playAudioVentre1() {
+function playAudioVen1() {
   var ventre1 = document.getElementById("ventre1");
   ventre1.play();
 }
