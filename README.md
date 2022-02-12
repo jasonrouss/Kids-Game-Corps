@@ -6,7 +6,7 @@ I made this game for my aunt she teaches kids age 3-5 in school
 
 Click/tap on the cards to make them match by pair within a time limit , while also learning the word of the images
 
-Key features: 
+# Key features: 
 
 ### Mobile responsive
 
